@@ -1,0 +1,32 @@
+@mixin theme-overrides($primary){
+
+	header .top-nav .logo.icn-down-arrow:before,
+	header .top-nav .logo.active.icn-up-arrow:before,
+	header .top-nav .tools li .icn-search, 
+	header .top-nav .tools li .icn-search-fill,
+	header .top-nav .tools li .icn-burger, 
+	header .top-nav .tools li .icn-close-fill,
+	header .search-bar .icn-magnifier:before,
+	header .top-nav .tools .mob-nav-links ul.main-nav li a,
+	.btn-r{
+		color: $primary;
+	}
+	.btn-r{
+		border-color: $primary;
+	}
+
+}
+
+
+body{
+	@include theme-overrides($color-blue);
+}
+.senior-tour{
+	@include theme-overrides($color-red);
+}
+.challenge-tour{
+	@include theme-overrides($color-deep-magenta);
+}
+.super-six{
+	@include theme-overrides($color-indigo);
+}

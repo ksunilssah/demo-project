@@ -1,0 +1,18 @@
+//Core Partials
+@import "variables";
+@import "mixins";
+@import "base";
+
+//Bootstrap
+@import "vendor/bootstrap";
+
+//Fonts
+@import "fonts/fonts";
+
+//Theme
+@import "page-theme";
+//Import ModulesPartials
+@import "partials/c001-header";
+@import "partials/c002-footer";
+@import "partials/layout-content";
+

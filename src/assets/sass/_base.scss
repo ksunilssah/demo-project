@@ -1,0 +1,62 @@
+@import "_reset";
+body {
+    font-family: 'BrownStd', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: $color-white;
+    transform: none;
+    color: $color-black;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;   
+}
+
+.container{
+    width: 100%!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+    @media #{$medium-up}{
+      padding-left:15px!important;
+      padding-right:15px!important;
+    }
+}
+
+@media #{$large-up}{
+    .container{
+        max-width: 1230px!important;
+    }
+}
+.ac{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+a{
+  text-decoration: none;  
+}
+:focus{
+  /*outline: none;*/
+}
+.pull-right{
+  float: right!important;
+}
+.pull-left{
+  float: left!important;
+}
+.hide{
+  display: none!important;
+}
+.btn-r{
+    border-radius: 100px;
+    border: solid 1.5px $color-blue;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: $color-blue;
+    padding: 8px 30px 10px 30px;
+}
+.remove-focus, a:focus[data-event="mouse"],.bx-controls a{
+  outline:none !important;
+} 

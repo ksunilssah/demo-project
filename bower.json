@@ -1,0 +1,25 @@
+{
+  "name": "ET",
+  "description": "ET development build tool",
+  "main": "",
+  "authors": [
+    "Sapient"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.0.0"
+  },  
+  "resolutions": {
+    "jquery": "2.0.0"
+  }
+}
