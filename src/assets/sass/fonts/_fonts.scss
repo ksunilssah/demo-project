@@ -21,7 +21,7 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position:absolute;
+  //position:absolute;
 }
 
 .icn-search:before {
@@ -65,4 +65,19 @@
 }
 .icn-user:before {
   content: "\6e";
+}
+.icn-facebook:before {
+  content: "\70";
+}
+.icn-youtube:before {
+  content: "\63";
+}
+.icn-twitter:before {
+  content: "\71";
+}
+.icn-tumblr:before {
+  content: "\72";
+}
+.icn-instagram:before {
+  content: "\74";
 }

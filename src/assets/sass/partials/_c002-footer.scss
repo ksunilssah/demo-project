@@ -1,10 +1,40 @@
-.site-footer{
-	background-color: $color-black;
-	text-align: center;
-	height: 60px;
-	color: #ffffff;
-	line-height:55px;
-	font-size: 32px;
-	font-weight: 500;
-	margin-top:50px;
+footer {
+  background-color: $color-black;
+
+  .container {
+    position: relative;
+    width: 375px;
+    height: 531px;
+	padding-top:40px;
+  }
+  .logo {
+    background: url('../img/logo-white.svg') no-repeat 20px 21px;
+    display: block;
+    position: relative;
+    width: 232px;
+    float: left;
+    height: 70px;
+    margin-left: -20px;
+  }
+  .footer--links {
+    @extend .col-sm-12;
+	@extend .col-md-2;
+
+	 width: 156.9px;
+  height: 20px;
+  font-family: BrownStd;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  color: #ffffff;
+    	@media #{$medium-up} {
+			  
+			  border: 1px solid red;
+		}
+    li {
+      @extend .col-sm-6;
+    }
+  }
 }
