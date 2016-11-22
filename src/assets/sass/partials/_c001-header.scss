@@ -1,26 +1,26 @@
-header{	
+header{
 	.top-nav{
-		border-bottom: 1px solid $color-light-grey;
+		border-bottom: rem-calc(1) solid $color-light-grey;
 		.container{
 			position:relative;
 		}
 		.logo{
-			background: url('../img/logo.svg') no-repeat 20px 21px;		
+			background: url('../img/logo.svg') no-repeat rem-calc(20 20);
 			display: block;
 			position:relative;
-			width: 232px;
+			width: rem-calc(232);
 			float: left;
-			height: 70px;
-			margin-left: -20px;
+			height: rem-calc(70);
+			margin-left: rem-calc(-20);
 			transition:background 150ms ease-in;
 			@media #{$medium-up}{
-				width: 265px;
+				width: rem-calc(265);
 			}
 			&.active{
-				background:$color-blue url('../img/logo-white.svg') no-repeat 18px 21px;
+				background:$color-blue url('../img/logo-white.svg') no-repeat rem-calc(18 21);
 				transition:background 150ms ease-in;
 				&.icn-up-arrow:before{
-					right:18px;
+					right:rem-calc(18);
 					top:27px;
 					color:$color-white;
 					font-size: 18px;
@@ -30,23 +30,23 @@ header{
 					}
 				}
 			}
-			&.icn-down-arrow{					
+			&.icn-down-arrow{
 				&:before{
 					right:18px;
 					top:27px;
 					color:$color-blue;
-					font-size: 18px;
+					font-size: rem-calc(18);
 					transition:all 450ms ease-in;
 					@media #{$medium-up}{
-						right:40px;
+						right: rem-calc(40);
 					}
 				}
-			}		
+			}
 		}
 		ul.sub-brands{
 			position:absolute;
 			left: 0;
-			top:71px;
+			top: rem-calc(71);
 			width: 100%;
 			z-index: 2;
 			height: 0;
@@ -54,13 +54,13 @@ header{
 			overflow: hidden;
 			visibility: hidden;
 			@media #{$medium-up}{
-				width: 265px;				
-				top:70px;
+				width: rem-calc(265);
+				top: rem-calc(70);
 			}
-			&.active{				
-				height:210px;
-				visibility: visible;	 
-			} 
+			&.active{
+				height: rem-calc(210);
+				visibility: visible;
+			}
 			li{
 				a{
 					display: block;
@@ -80,8 +80,8 @@ header{
 					}
 				}
 			}
-		}	
-		
+		}
+
 		.tools{
 			float: right;
 			padding: 15px 0 15px 0;
@@ -92,19 +92,19 @@ header{
 			li{
 				display: inline-block;
 				.icn-search, .icn-search-fill{
-					font-size: 38px;				
+					font-size: 38px;
 					color:$color-blue;
 					height: 38px;
 					width: 38px;
 					position: relative;
-					display: block;					
-					&:before{						
+					display: block;
+					&:before{
 						left: 0;
-						top: 0;					 
+						top: 0;
 					}
 				}
 				.icn-burger, .icn-close-fill{
-					font-size: 38px;				
+					font-size: 38px;
 					color:$color-blue;
 					height: 38px;
 					width: 38px;
@@ -127,15 +127,15 @@ header{
 				height: 0;
 				width: 100%;
 				background-color:$color-white;
-				z-index: 1;	
-				overflow: hidden;	
+				z-index: 1;
+				overflow: hidden;
 				transition:all  350ms ease-in;
 				visibility: hidden;
-				&.active{	
-					visibility: visible;				
-					height: 100vh;	
-					transition:all 350ms ease-in;				
-				}				
+				&.active{
+					visibility: visible;
+					height: 100vh;
+					transition:all 350ms ease-in;
+				}
 				ul.main-nav{
 					li{
 						display: block;
@@ -147,7 +147,7 @@ header{
 							}
 						}
 						a{
-							display: block;							
+							display: block;
 							font-size: 18px;
 							line-height: 20px;
 							padding:16px 0 16px 0;
@@ -196,12 +196,12 @@ header{
 							}
 							&.icn-travel{
 								&:before{
-									font-size: 19px;									
+									font-size: 19px;
 								}
-							}									
+							}
 						}
 					}
-				}			
+				}
 			}
 		}
 	}
@@ -214,13 +214,13 @@ header{
 		width: 100%;
 		z-index: -1;
 		border-bottom: 1px solid $color-light-grey;
-		transition:all 250ms ease-in;	
+		transition:all 250ms ease-in;
 		overflow: hidden;
-		visibility: hidden;	
+		visibility: hidden;
 		&.active{
 			height: 60px;
 			z-index: 1;
-			visibility: visible;			
+			visibility: visible;
 		}
 		input{
 			width: 100%;
@@ -228,8 +228,8 @@ header{
 			height: 55px;
 			font-size: 16px;
 			line-height: 18px;
-			color: $color-light-grey2;	
-			padding: 0 35px 0 30px;		
+			color: $color-light-grey2;
+			padding: 0 35px 0 30px;
 		}
 		.clear{
 			position:absolute;
@@ -241,7 +241,7 @@ header{
 			transition:height 250ms ease-in;
 			&.active{
 				opacity: 1;
-			}			
+			}
 			&:before{
 				color: $color-grey;
 				font-size: 16px;
@@ -252,7 +252,7 @@ header{
 			left: 20px;
 			top: 20px;
 			width: 25px;
-			height: 16px;			
+			height: 16px;
 			padding:0 9px 0 0;
 			display: block;
 			&:before{
@@ -270,8 +270,8 @@ header{
 		position:absolute;
 		right: 20px;
 		bottom:0;
-		width:85px;	
-		z-index: 4;	
+		width:85px;
+		z-index: 4;
 		&.active{
 			li{
 				visibility: visible;
@@ -325,7 +325,7 @@ header{
 		&.active{
 			display: block;
 		}
-	}	
+	}
 }
 .senior-tour {
 	header{
@@ -339,4 +339,3 @@ header{
 		}
 	}
 }
-
