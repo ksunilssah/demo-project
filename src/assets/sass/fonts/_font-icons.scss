@@ -1,0 +1,74 @@
+// Font Icons
+@include font-face("et", "../fonts/et", $style: normal, $weight: normal);
+
+[class^="icn-"]:before,
+[class*=" icn-"]:before {
+  font-family: "et" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position:absolute;
+}
+
+.icn-search:before {
+  content: "\61";
+}
+.icn-close:before {
+  content: "\62";
+}
+.icn-burger:before {
+  content: "\63";
+}
+.icn-up-arrow:before {
+  content: "\64";
+}
+.icn-down-arrow:before {
+  content: "\65";
+}
+.icn-close-fill:before {
+  content: "\66";
+}
+.icn-flag:before {
+  content: "\67";
+}
+.icn-magnifier:before {
+  content: "\68";
+}
+.icn-home:before {
+  content: "\69";
+}
+.icn-cart:before {
+  content: "\6a";
+}
+.icn-ticket:before {
+  content: "\6b";
+}
+.icn-travel:before {
+  content: "\6c";
+}
+.icn-search-fill:before {
+  content: "\6d";
+}
+.icn-user:before {
+  content: "\6e";
+}
+.icn-facebook:before {
+  content: "\70";
+}
+.icn-youtube:before {
+  content: "\63";
+}
+.icn-twitter:before {
+  content: "\71";
+}
+.icn-tumblr:before {
+  content: "\72";
+}
+.icn-instagram:before {
+  content: "\74";
+}

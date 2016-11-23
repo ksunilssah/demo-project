@@ -1,0 +1,24 @@
+// Font Face
+
+  @include font-face("BrownStd",
+                    "../fonts/BrownStd-Bold",
+                    $style: normal, $weight: normal);
+  //
+  // @include font-face("BrownStd-LightItalic", "../fonts/BrownStd-LightItalic", $style: normal, $weight: normal);
+  //
+  // @include font-face("BrownStd-Light", "../fonts/BrownStd-Light", $style: normal, $weight: normal);
+  //
+  // @include font-face("BrownStd-Regular", "../fonts/BrownStd-Regular", $style: normal, $weight: normal);
+
+body {
+    // @extend .font-regular;
+    // @extend .p;
+
+    font-weight: 300;
+    background-color: $color-white;
+    transform: none;
+    color: $color-black;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+}
