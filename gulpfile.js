@@ -2,7 +2,9 @@
 var gulp = require('gulp'),
     hb = require('gulp-hb'),
     clean = require('gulp-clean'),
+    imagemin = require('gulp-imagemin'),
     sass = require('gulp-sass'),
+    scsslint = require('gulp-scss-lint'),
     browserSync = require('browser-sync'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
@@ -24,14 +26,11 @@ var gulp = require('gulp'),
        libs: {
          js:[
            'bower_components/jquery/jquery.min.js'
-         ],
-         css: [
-           'src/assets/lib/bootstrap.min.css'
          ]
        },
-       modules:['src/assets/js/config.js',
-                'src/assets/js/util.js',     
-                'src/assets/js/component/*.js'                          
+       modules:['src/scripts/config.js',
+                'src/scripts/util.js',     
+                'src/components/**/*.js'                          
               ],
        imgs: ['src/assets/img/**/**.*','src/assets/img/**.*'],
        fonts: ['src/assets/fonts/**/**.*','src/assets/fonts/**.*']
@@ -49,6 +48,15 @@ var gulp = require('gulp'),
       .pipe(minifyCSS({ keepSpecialComments: 1, processImport: false }))
       .pipe(rename({suffix:'.min'}))
       .pipe(gulp.dest(bases.dist + 'assets/css'));
+  });
+
+  // CSS Linting tasks
+  gulp.task('scss-lint', function() {
+    return gulp.src(bases.src+'**/*.scss')
+      .pipe(scsslint({
+        'config': '.scss-lint.yml',
+        'reporterOutput': 'scssReport.json'
+      }));
   });
 
   //JS Tasks
@@ -103,10 +111,17 @@ gulp.task('accessibility', function() {
 gulp.task('markup', function(){
   return gulp.src([bases.src+'templates/pages/**/*.hbs'], {
     })
-    .pipe(hb({
-      partials: bases.src+'templates/partials/**/*.hbs',
-      data: bases.src+'asstes/js/data/**/*.{js,json}'
-    }))
+    .pipe(
+      hb({
+        debug: true,
+        helpers: [
+          'node_modules/handlebars-layouts',
+        ],
+        data: bases.src+'asstes/js/data/**/*.{js,json}'
+      })
+      .partials(bases.src+'templates/partials/**/*.hbs')
+      .partials(bases.src+'components/**/*.hbs')
+    )
     .pipe(rename({
       extname: ".html"
     }))
@@ -124,6 +139,7 @@ gulp.task('copy:imgs', function() {
 
   // images
    gulp.src(paths.imgs)
+   .pipe(imagemin())
    .pipe(gulp.dest(bases.dist+'assets/img'));
 
 });
@@ -161,7 +177,7 @@ gulp.task('markup-watch', ['markup'], function (done) {
 });
 
 gulp.task('default', function() {
-  runSequence(['copy:all','css', 'js', 'markup'],
+  runSequence(['copy:all','css', 'scss-lint', 'js', 'markup'],
   //gulp.task('default', [ 'copy:all','css', 'js', 'markup','webpackbuild'], 
   function () {
     var options = {
@@ -181,7 +197,9 @@ gulp.task('default', function() {
     });
 
     gulp.watch(bases.src+'assets/**/**/*.scss', ['css-watch']);
-    gulp.watch(bases.src+'assets/js/**/*.js', ['js-watch']);
+    gulp.watch(bases.src+'components/**/**/*.scss', ['css-watch']);
+    gulp.watch(bases.src+'assets/libs/**/*.js', ['js-watch']);
+    gulp.watch(bases.src+'assets/components/**/*.js', ['js-watch']);
     gulp.watch(bases.src+'assets/js/data/**/*.json', ['json-watch']);
     gulp.watch(bases.src+'**/*.hbs', ['markup', 'markup-watch']);
     gulp.src('/')    
