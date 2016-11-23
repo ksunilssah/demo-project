@@ -11,8 +11,12 @@
 
 //Theme
 @import "page-theme";
-//Import ModulesPartials
-@import "partials/c001-header";
-@import "partials/c002-footer";
-@import "partials/layout-content";
+
+//Template
+@import "layout-content";
+
+
+//Components Styling
+@import "../../components/header/c001-header";
+@import "../../components/footer/c002-footer";
 

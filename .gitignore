@@ -42,3 +42,5 @@ db.json
 
 # dist folder
 dist
+
+scssReport.json
