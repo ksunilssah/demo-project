@@ -5,10 +5,15 @@ $ npm install
 ```
 Scss linting has a dependency of a `ruby gem`. You should have `Ruby` installed on your system.
 
-For windows machine. Please get Ruby installer file from 
-
 
 ```sh
 $ gem install scss_lint
 ```
  
+To remove scss linting, simply remove `scss-lint` from gulp run sequence. 
+
+```sh
+...
+runSequence(['copy:all','css', 'scss-lint', 'js', 'markup'],
+...
+```
