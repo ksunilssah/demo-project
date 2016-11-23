@@ -196,11 +196,9 @@ gulp.task('default', function() {
         }
     });
 
-    gulp.watch(bases.src+'assets/**/**/*.scss', ['css-watch']);
-    gulp.watch(bases.src+'components/**/**/*.scss', ['css-watch']);
-    gulp.watch(bases.src+'assets/libs/**/*.js', ['js-watch']);
-    gulp.watch(bases.src+'assets/components/**/*.js', ['js-watch']);
-    gulp.watch(bases.src+'assets/js/data/**/*.json', ['json-watch']);
+    gulp.watch(bases.src+'**/*.scss', ['css-watch']);
+    gulp.watch(bases.src+'**/*.js', ['js-watch']);
+    gulp.watch(bases.src+'**/*.json', ['json-watch']);
     gulp.watch(bases.src+'**/*.hbs', ['markup', 'markup-watch']);
     gulp.src('/')    
     .pipe(exec('cd src/react', options))
