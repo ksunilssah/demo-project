@@ -44,4 +44,4 @@ db.json
 dist
 
 # DS Store
-*.DS_Store
+.DS_Store
