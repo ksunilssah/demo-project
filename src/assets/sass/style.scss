@@ -9,10 +9,12 @@
 //Fonts
 @import "fonts/fonts";
 
+// Typography
+@import "fonts/typography-units";
+
 //Theme
 @import "page-theme";
 //Import ModulesPartials
 @import "partials/c001-header";
 @import "partials/c002-footer";
 @import "partials/layout-content";
-

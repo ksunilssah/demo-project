@@ -1,0 +1,8 @@
+// Responsive Typography
+h1, .h1 {
+  @include font-size($h1-font-sizes);
+}
+
+p, .p {
+  @include font-size($p-font-sizes);
+}
