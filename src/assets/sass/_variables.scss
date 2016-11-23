@@ -1,6 +1,6 @@
 
 $x-small: "all and (min-width: 320px)";
-$small-up: "all and (min-width: 768px)"; 
+$small-up: "all and (min-width: 768px)";
 $medium-up: "all and (min-width: 992px)";
 $large-up: "all and (min-width: 1230px)";
 
@@ -18,3 +18,19 @@ $color-light-grey: #dedede;
 $color-light-grey2: #979797;
 $color-white-smoke: #f5f5f5;
 $color-footer: #0c1a2a;
+
+/* Typography */
+
+$h1-font-sizes: (
+  null  : 28px,
+  small : 31px,
+  medium: 33px,
+  large : 36px
+);
+
+$p-font-sizes: (
+  null  : 15px,
+  small : 16px,
+  medium: 17px,
+  large : 19px
+);
