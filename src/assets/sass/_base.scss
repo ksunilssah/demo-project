@@ -1,15 +1,4 @@
 @import "_reset";
-body {
-    font-family: 'BrownStd', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    background-color: $color-white;
-    transform: none;
-    color: $color-black;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;   
-}
 
 .container{
     width: 100%!important;
@@ -33,7 +22,7 @@ body {
   overflow: hidden;
 }
 a{
-  text-decoration: none;  
+  text-decoration: none;
 }
 :focus{
   /*outline: none;*/
@@ -59,4 +48,4 @@ a{
 }
 .remove-focus, a:focus[data-event="mouse"],.bx-controls a{
   outline:none !important;
-} 
+}

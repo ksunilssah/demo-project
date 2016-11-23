@@ -7,7 +7,8 @@
 @import "vendor/bootstrap";
 
 //Fonts
-@import "fonts/fonts";
+@import "fonts/font-icons";
+@import "fonts/font-face";
 
 // Typography
 @import "fonts/typography-units";
@@ -22,4 +23,3 @@
 //Components Styling
 @import "../../components/header/c001-header";
 @import "../../components/footer/c002-footer";
-
