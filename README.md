@@ -1,4 +1,4 @@
-# European Tour Dev Guide
+#  Dev Guide
 ```sh
 $ bower install
 $ npm install
