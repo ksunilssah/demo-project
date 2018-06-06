@@ -1,10 +1,10 @@
 {
-  "name": "ET",
-  "description": "ET development build tool",
+  "name": "Demo",
+  "description": "Development build tool",
   "version": "0.0.1",
   "author": {
-    "name": "Sapient Nitro",
-    "url": "http://www.sapientnitro.com/"
+    "name": "Company name",
+    "url": "http://www.localhost/"
   },
   "engines": {
     "node": ">=0.10"
